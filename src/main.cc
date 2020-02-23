@@ -37,6 +37,7 @@ int main(int argc, char* args[]) {
   // Install segv handler which writes stacktrace to a log upon segfault.
   // See stacktrace.cc
   wmderland::segv::InstallHandler(&wmderland::segv::Handle);
+  google::EnableLogCleaner(3);
 
   // Initialize google's c++ logging library (if installed)
   // Logging-related macros are defined in config.h.in
