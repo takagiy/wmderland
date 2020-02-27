@@ -16,6 +16,8 @@
 <img src="https://github.com/aesophor/wmderland/raw/master/.meta/tiling.png">
 </div>
 
+<br>
+
 ## Overview
 wmderland is a modern, minimal Tiling Window Manager written in C/C++ with [Xlib](https://en.wikipedia.org/wiki/Xlib)
 
@@ -24,6 +26,26 @@ wmderland is a modern, minimal Tiling Window Manager written in C/C++ with [Xlib
 * Stable, simple, and maintainable
 
 **Documentation available at its [wiki page](https://github.com/aesophor/wmderland/wiki).**
+
+<br>
+
+## Build Manually
+See [BUILD.md](https://github.com/aesophor/wmderland/blob/master/BUILD.md).
+
+<br>
+
+## Installation
+* Arch Linux
+```
+yay -S wmderland-git
+```
+
+<br>
+
+## Post-Installation
+Remember to place a config file at `~/.config/wmderland/config`
+
+[An example config is available here](https://github.com/aesophor/wmderland/blob/master/example/config).
 
 <br>
 
@@ -52,34 +74,6 @@ wmderland, while derived from i3, is built with a different philosophy in mind. 
 * Supports a subset of EWMH, see `src/properties.cc`
 * Error recovery mechanism
 * Shipped with a [tiny client](https://github.com/aesophor/wmderland/tree/master/ipc-client) which can interact/control wmderland
-
-<br>
-
-## Build Requirements / Installation
-#### Build Requirements
-* g++ (requires C++14)
-* CMake
-* Xlib headers
-* **Optional** - [glog](https://github.com/google/glog) (Google's C++ logging library)
-
-#### Installation
-1. Build and install project
-```
-$ git clone https://github.com/aesophor/wmderland.git
-$ cd wmderland
-$ ./build.sh -i
-```
-
-2. Copy the config file (**IMPORTANT**)
-```
-$ mkdir -p ~/.config/wmderland
-$ cp example/config ~/.config/wmderland/.
-```
-
-3. If not using a Display Manager, add this to your ~/.xinitrc and execute `startx`
-```
-exec wmderland
-```
 
 <br>
 
