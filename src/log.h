@@ -8,7 +8,12 @@
 // then these macros will do nothing.
 #if GLOG_FOUND
 #include <glog/logging.h>
-#define WM_INIT_LOGGING(executable_name) google::InitGoogleLogging(executable_name)
+#define WM_INIT_LOGGING(executable_name)        \
+  do {                                          \
+    google::InitGoogleLogging(executable_name); \
+    google::EnableLogCleaner(3);                \
+  } while (0)
+
 #define WM_LOG(severity, msg)                \
   do {                                       \
     LOG(severity) << msg;                    \
