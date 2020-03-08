@@ -15,7 +15,7 @@
 
 <img src="https://github.com/aesophor/wmderland/raw/master/.meta/tiling.png">
 
-`configurable workflow` `tree-based tiling` `easy-to-use config` `minimalism`
+`easy-to-use config` `tree-based tiling`  `minimalism`
 </div>
 
 <br>
@@ -29,9 +29,6 @@ A minimal i3-gaps, written in C++ and Xlib.
 * Fullscreen toggle
 * Floating toggle
 * Gaps & borders
-
-<br>
-
 * Window focus follows mouse
 * Smart floating
 * Supports a subset of EWMH, see `src/properties.cc`
